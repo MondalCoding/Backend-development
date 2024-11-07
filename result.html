@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Result</title>
+</head>
+<body>
+    <h2>Form Data</h2>
+    <div id="formData"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var formData = `
+                <p>First Name: ${localStorage.getItem("fname")}</p>
+                <p>Last Name: ${localStorage.getItem("lname")}</p>
+                <p>Email: ${localStorage.getItem("email")}</p>
+                <p>Phone Number: ${localStorage.getItem("phone")}</p>
+                <p>Address: ${localStorage.getItem("address")}</p>
+                <p>Father's Name: ${localStorage.getItem("fathername")}</p>
+                <p>Date of Birth: ${localStorage.getItem("dob")}</p>
+                <p>Gender: ${localStorage.getItem("gender")}</p>
+                <p>Country: ${localStorage.getItem("selcountry")}</p>
+                <p>State: ${localStorage.getItem("selstate")}</p>
+                <p>City: ${localStorage.getItem("selcity")}</p>
+                <p>Pin Code: ${localStorage.getItem("pin")}</p>
+            `;
+            document.getElementById('formData').innerHTML = formData;
+            console.log(localStorage.getItem("phone"));
+        });
+    </script>
+</body>
+</html>
+
